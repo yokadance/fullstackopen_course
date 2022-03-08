@@ -1,8 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-
-
+//EXERCISE 1.0
 
 const Header = (props)=> {
   return (  
