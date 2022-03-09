@@ -8,7 +8,7 @@ const Header = (props)=> {
   return (  
     <div>
     <h1>
-      This is {props.course} course
+      This is {props.name} course
     </h1>
   </div>  
   )
@@ -51,9 +51,10 @@ const Separator =() =>{
 
 
 const App = () => {
-  const course = 'Half Stack application development'
-  
-  const parts = [{
+  const course = {
+   name:'Half Stack application development',
+   parts : [
+     {
     name:  'Fundamentals of React',
     exercises : 10
   },
@@ -66,18 +67,18 @@ const App = () => {
   { 
     name: 'State of a component',
     exercises : 14
-  }]
+  }]}
 
 
   return (
     <div>
-    <Header course={course}/>
-    <Content name={parts[0].name} />
-    <Total exercises={parts[0].exercises} />
-     <Content name={parts[1].name} />
-    <Total exercises={parts[1].exercises} />
-   <Content name={parts[2].name} />
-    <Total exercises={parts[2].exercises} />
+    <Header name={course.name}/>
+    <Content name={course.parts[0].name} />
+    <Total exercises={course.parts[0].exercises} />
+    <Content name={course.parts[1].name} />
+    <Total exercises={course.parts[1].exercises} />
+   <Content name={course.parts[2].name} />
+    <Total exercises={course.parts[2].exercises} />
    
 
 
