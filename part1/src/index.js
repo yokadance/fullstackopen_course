@@ -53,33 +53,32 @@ const Separator =() =>{
 const App = () => {
   const course = 'Half Stack application development'
   
-  const part1 = {
+  const parts = [{
     name:  'Fundamentals of React',
     exercises : 10
-  }
+  },
 
-  const part2 = {
+  {
     name: 'Using props to pass data',
     exercises: 7
-  }
+  },
 
-  const part3 ={ 
+  { 
     name: 'State of a component',
     exercises : 14
-  }
+  }]
 
 
   return (
     <div>
     <Header course={course}/>
-    <Content name={part1.name} />
-     <Total exercises={part1.exercises} />
-    <Separator/>
-    <Content name={part2.name}/>
-    <Total exercises={part2.exercises}/>
-    <Separator/>
-    <Content name={part3.name}/>
-    <Total exercises={part3.exercises}/> 
+    <Content name={parts[0].name} />
+    <Total exercises={parts[0].exercises} />
+     <Content name={parts[1].name} />
+    <Total exercises={parts[1].exercises} />
+   <Content name={parts[2].name} />
+    <Total exercises={parts[2].exercises} />
+   
 
 
   </div>
