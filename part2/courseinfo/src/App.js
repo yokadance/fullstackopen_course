@@ -4,9 +4,8 @@
 
 
 const Course = ({ course }) => {
-  const sum = course.parts
-    .map(p => p.exercises)
-    .reduce((s,e) => s+e, 0)
+  const sum = course.parts.map(p => p.exercises).reduce((s,e) => s+e, 0)
+    //console.log('valores s y e', s, p)
 
   return (
     <>
