@@ -36,7 +36,9 @@ const Content = ({ parts }) =>
 
 
 const App = () => {
-  const course = {
+  const course = [
+    
+    {
     id: 1,
     name: 'Half Stack application development',
     parts: [
@@ -61,9 +63,31 @@ const App = () => {
         id: 4,
       },
     ],
-  }
+  },
+  {
+    id: 2,
+    name: 'JavaEE for dummies',
+    parts: [
+      {
+      name: 'Using DAO Model ',
+      exercises: 70,
+      id: 1,
+    },
+    {
+      name: 'Using SQL with JAVA ',
+      exercises: 70,
+      id: 1,
+    },
+  ]
+  }]
 
-  return <Course course={course} />
+  return <div>
+    {course.map(course=>
+    <Course 
+    id={course.id}
+    course={course}
+    />)}
+    </div>
 }
 
 export default App
